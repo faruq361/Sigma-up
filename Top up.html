@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Menambahkan font Poppins -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+            background: #1f2a48; /* Warna background lebih gelap dan tajam */
+            color: #eee; /* Warna teks lebih terang */
+            text-align: center;
+        }
+
+        header {
+            background-color: #00aaff; /* Mengubah warna header untuk kesan yang lebih striking */
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .promo {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 60%;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            background-color: #1f6582;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .form-container input {
+            padding: 12px;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-container input:focus {
+            border-color: #3498db;
+        }
+
+        .form-container button {
+            background-color: #3498db;
+            color: white;
+            padding: 14px 28px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .form-container button:active {
+            background-color: #1f6582;
+        }
+
+        .garansi {
+            background-color: #27ae60;
+            color: white;
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin: 5px;
+        }
+
+        .developer {
+            font-style: italic;
+            color: #3498db;
+        }
+
+        .info-message {
+            font-size: 1.5rem;
+            color: #ff6f61;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sigma Up</h1>
+    </header>
+
+    <div class="promo">
+        🎉 **Diskon Hari Raya Idul Fitri 25%!** Jangan lewatkan kesempatan spesial ini! 🎊
+    </div>
+
+    <div class="content">
+        <h2>Pilih Game Mobile</h2>
+        <button class="button" onclick="topUp('Minecraft')">Minecraft</button>
+        <button class="button" onclick="topUp('Mobile Legends')">Mobile Legends</button>
+        <button class="button" onclick="topUp('PUBG Mobile')">PUBG Mobile</button>
+        <button class="button" onclick="topUp('Free Fire')">Free Fire</button>
+        <button class="button" onclick="topUp('Call of Duty Mobile')">Call of Duty Mobile</button>
+        <button class="button" onclick="topUp('Arena of Valor')">Arena of Valor</button>
+        <button class="button" onclick="topUp('Clash Royale')">Clash Royale</button>
+        <button class="button" onclick="topUp('Brawl Stars')">Brawl Stars</button>
+
+        <h2>Pilih Game PC</h2>
+        <button class="button" onclick="topUp('Minecraft')">Minecraft</button>
+        <button class="button" onclick="topUp('League of Legends')">League of Legends</button>
+        <button class="button" onclick="topUp('Dota 2')">Dota 2</button>
+        <button class="button" onclick="topUp('Counter Strike: Global Offensive')">CS: GO</button>
+        <button class="button" onclick="topUp('Valorant')">Valorant</button>
+        <button class="button" onclick="topUp('Fortnite')">Fortnite</button>
+        <button class="button" onclick="topUp('Apex Legends')">Apex Legends</button>
+    </div>
+
+    <div id="gamer-tag-form" class="form-container" style="display: none;">
+        <h3>Masukkan Gamer Tag untuk Minecraft</h3>
+        <input type="text" id="gamer-tag" placeholder="Gamer Tag Minecraft" required>
+        <button onclick="submitTopUp('gamerTag')">Kirim</button>
+    </div>
+
+    <div id="id-form" class="form-container" style="display: none;">
+        <h3>Masukkan ID</h3>
+        <input type="text" id="player-id" placeholder="ID Game" required>
+        <button onclick="submitTopUp('playerId')">Kirim</button>
+    </div>
+
+    <div class="garansi">
+        <p>Garansi: Jika top-up tidak masuk, silakan hubungi kami di <b>085259392830</b></p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Sigma Up | All rights reserved</p>
+        <p class="developer">Pengembang: Sigma Tim</p>
+    </div>
+
+    <div id="info-message" class="info-message" style="display: none;">
+        <p>Tunggu Dajjal datang, baru bisa. Soalnya ini belum jadi bre🗿</p>
+    </div>
+
+    <script>
+        let selectedGame = '';
+
+        function topUp(game) {
+            selectedGame = game;
+            if (selectedGame === 'Minecraft') {
+                document.getElementById('gamer-tag-form').style.display = 'block';
+                document.getElementById('id-form').style.display = 'none';
+            } else {
+                document.getElementById('id-form').style.display = 'block';
+                document.getElementById('gamer-tag-form').style.display = 'none';
+            }
+        }
+
+        async function submitTopUp(type) {
+            let inputValue;
+            if (type === 'gamerTag') {
+                inputValue = document.getElementById('gamer-tag').value;
+            } else {
+                inputValue = document.getElementById('player-id').value;
+            }
+
+            if (!inputValue) {
+                alert('Harap masukkan ID atau Gamer Tag!');
+                return;
+            }
+
+            const data = {
+                game: selectedGame,
+                player: inputValue,
+                amount: 1000,
+            };
+
+            setTimeout(() => {
+                alert(`Top-up untuk game ${selectedGame} berhasil! (Ini hanya simulasi, bro)`);
+
+                if (type === 'gamerTag') {
+                    document.getElementById('gamer-tag').value = '';
+                } else {
+                    document.getElementById('player-id').value = '';
+                }
+
+                document.getElementById('gamer-tag-form').style.display = 'none';
+                document.getElementById('id-form').style.display = 'none';
+                document.getElementById('info-message').style.display = 'block'; // Menampilkan pesan
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
